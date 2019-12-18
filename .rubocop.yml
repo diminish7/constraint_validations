@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - 'spec/dummy/bin/*'
+
+Metrics/LineLength:
+  Max: 100
+
+Style/Documentation:
+  Exclude:
+    - app/**/*
+    - spec/**/*
