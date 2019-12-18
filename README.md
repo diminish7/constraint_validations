@@ -7,6 +7,10 @@ Include the concern in ActiveRecord models to get automatic validations
 include ConstraintValidations
 ```
 
+Including the concern will evaluate database constraints and automatically add the following
+validations:
+1. For any column with a not-NULL constraint, it will validate `presence: true`
+
 ## Installation
 Add this line to your application's Gemfile:
 
