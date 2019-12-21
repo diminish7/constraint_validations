@@ -12,7 +12,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_191_218_051_042) do
+ActiveRecord::Schema.define(version: 20_191_219_054_558) do
+  create_table 'thing_with_integer_fields', force: :cascade do |t|
+    t.integer 'field_with_integer_constraint'
+    t.bigint 'field_with_big_integer_constraint'
+    t.integer 'field_with_small_integer_constraint', limit: 2
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
+
   create_table 'thing_with_not_null_fields', force: :cascade do |t|
     t.string 'field_with_constraint', null: false
     t.string 'field_without_constraint'
